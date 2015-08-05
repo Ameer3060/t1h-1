@@ -356,6 +356,11 @@ $("#g51").click(function(){
 $("#location1").toggle("slide", { direction: "right" }, 500);
 });
 
+$(".allLocationleft li ul").click(function(){
+
+$("#location1").toggle("slide", { direction: "right" }, 500);
+});
+
 $("#g5").click(function(){
 	$('.assetdetails').hide();	
 	$('.allmenue li a').css('background-color','#8D8D8D');
@@ -430,6 +435,27 @@ $('.allLocation li .nav').click(function(){
 	$(this).next().show();
 })
 
+$('.allLocationleft li .nav').click(function(){
+	$('.allLocationleft li ul').hide();
+	console.log("ghjh");
+	$(this).next().show();
+})
+
+
+
+$('.allLocationleft li ul li').click(function(){
+				
+				//alert($(this).parent('ul').parent('li').index());
+				
+				
+				var id=$(this).parent('ul').parent('li').index();
+				$('#g51').css({'background-image':'url(imgs/c'+(id+1)+'.png)','background-color': '#5FD367','background-repeat':'no-repeat','background-position':'center 12px','line-height':'70px'}).text($(this).text());
+
+				
+
+
+});
+
 $('.allLocation li ul li').click(function(){
 				
 				//alert($(this).parent('ul').parent('li').index());
@@ -446,7 +472,7 @@ $('.allLocation li ul li').click(function(){
 				
 				var id=$(this).parent('ul').parent('li').index();
 				console.log(id);
-				$('#g5').css({'background-image':'url(imgs/c'+(id+1)+'.png)','background-color': '#5FD367','background-repeat':'no-repeat','background-position':'center','line-height':'70px'}).text($(this).text());
+				$('#g5').css({'background-image':'url(imgs/c'+(id+1)+'.png)','background-color': '#5FD367','background-color': '#5FD367','background-repeat':'no-repeat','background-position':'center 12px','line-height':'70px'}).text($(this).text());
 				$("#g5 span").removeClass("fa fa-globe");
 				$('#g1').css('background-color', '#8d8d8d');
 							
@@ -482,14 +508,14 @@ $('.allcomapny li .nav').click(function(){
 				
 				if(first == 1)
 				{
-				$('#g2').css({'background-image':'url(imgs/menu'+(id+2)+'.png)','background-color': '#5FD367','id': 'g2'});
+				$('#g2').css({'background-image':'url(imgs/menu'+(id+2)+'.png)','background-color': '#5FD367','id': 'g2','background-color': '#5FD367','background-repeat':'no-repeat','background-position':'center 12px','line-height':'70px'});
 				}
 				else
 				{
 				first = 2;
 				$(this).parents('li').prev().remove();
 				$('#g5').parent().hide();
-				$('#g2').css({'background-image':'url(imgs/menu'+(id+2)+'.png)','background-color': '#5FD367'});
+				$('#g2').css({'background-image':'url(imgs/menu'+(id+2)+'.png)','background-color': '#5FD367','background-color': '#5FD367','background-repeat':'no-repeat','background-position':'center 12px','line-height':'70px'});
 				$('#g3').css('background-color', '#8d8d8d');
 				
 				$("#g3 span").removeClass("fa fa-globe");
@@ -525,11 +551,11 @@ $('.allprojects li .nav').click(function(){
 				ion.sound.play("button_click_on");
 				if(first == 1)
 				{
-				$('#g3').css({'background-image':'url(imgs/menu2'+(id+2)+'.png)','background-color': '#5FD367'});
+				$('#g3').css({'background-image':'url(imgs/menu2'+(id+2)+'.png)','background-color': '#5FD367' ,'background-color': '#5FD367','background-repeat':'no-repeat','background-position':'center 12px','line-height':'70px'});
 				}
 				else if(first == 2)
 				{
-				$('#g3').css({'background-image':'url(imgs/menu2'+(id+2)+'.png)','background-color': '#5FD367'});
+				$('#g3').css({'background-image':'url(imgs/menu2'+(id+2)+'.png)','background-color': '#5FD367' ,'background-color': '#5FD367','background-repeat':'no-repeat','background-position':'center 12px','line-height':'70px'});
 				$('#g4').css('background-color', '#8d8d8d');
 				}
 				else
@@ -538,8 +564,8 @@ $('.allprojects li .nav').click(function(){
 				first = 3;
 				$('#g5').parent().hide();
 				$('#g2').parent().hide();
-				$('#g3').css({'background-image':'url(imgs/menu2'+(id+2)+'.png)','background-color': '#5FD367'});
-				$('#g4').css('background-color', '#8d8d8d');
+				$('#g3').css({'background-image':'url(imgs/menu2'+(id+2)+'.png)','background-color': '#5FD367' ,'background-color': '#5FD367','background-repeat':'no-repeat','background-position':'center 12px','line-height':'70px'});
+				$('#g4').css({'background-color': '#8d8d8d' ,'background-color': '#5FD367','background-repeat':'no-repeat','background-position':'center 12px','line-height':'70px'});
 				
 				}
 				
@@ -577,23 +603,23 @@ $('.allassets li .nav').click(function(){
 				console.log(id);
 				$('.asset-title').text($(this).find('span').eq(1).text());
 				if(first == 1)
-				{
-				$('#g4').css({'background-image':'url(imgs/'+(id+1)+'.png)','background-color': '#5FD367'});
+				{console.log("case");
+				$('#g4').css({'background-image':'url(imgs/'+(id+1)+'.png)','background-color': '#5FD367','background-color': '#5FD367','background-repeat':'no-repeat','background-position':'center 12px','line-height':'70px'});
 				}
 				else if(first == 2)
 				{
-				$('#g4').css({'background-image':'url(imgs/'+(id+1)+'.png)','background-color': '#5FD367'});
+				$('#g4').css({'background-image':'url(imgs/'+(id+1)+'.png)','background-color': '#5FD367','background-color': '#5FD367','background-repeat':'no-repeat','background-position':'center 12px','line-height':'70px'});
 				}
 				else if(first == 3)
 				{
-				$('#g4').css({'background-image':'url(imgs/'+(id+1)+'.png)','background-color': '#5FD367'});
+				$('#g4').css({'background-image':'url(imgs/'+(id+1)+'.png)','background-color': '#5FD367','background-color': '#5FD367','background-repeat':'no-repeat','background-position':'center 12px','line-height':'70px'});
 				}
 				else
 				{
 				$('#g5').parent().hide();
 				$('#g2').parent().hide();
 				$('#g3').parent().hide();
-				$('#g4').css({'background-image':'url(imgs/'+(id+1)+'.png)','background-color': '#5FD367'});
+				$('#g4').css({'background-image':'url(imgs/'+(id+1)+'.png)','background-color': '#5FD367','background-color': '#5FD367','background-repeat':'no-repeat','background-position':'center 12px','line-height':'70px'});
 				
 				}
 				
@@ -603,7 +629,7 @@ $('.allassets li .nav').click(function(){
 				$("#g3 span").removeClass("fa fa-globe");
 				
 				
-				$("#g51 span").removeClass("fa fa-globe");
+				$("#g5 span").removeClass("fa fa-globe");
 				$("#g2 span").removeClass("fa fa-globe");
 				$("#g3 span").removeClass("fa fa-globe");
 				$("#g4 span").removeClass("fa fa-globe");
@@ -724,7 +750,7 @@ $('#z').click(function(){
 	<a href='#' class="nav"><span  style="background:url(imgs/iraq.png) no-repeat; padding:5px 20px;"></span><span>Iraq<span></a>
 	
 	<ul>
-		<li style="font-size:20px; ">All Cities</li>
+		<li style="font-size:20px; ">All </li>
 		<li style=" font-size:20px;">Najaf</li>
 		<li style=" font-size:20px;">Baghdad</li>
 		<li style=" font-size:20px;">Basra</li>
@@ -733,7 +759,7 @@ $('#z').click(function(){
 </li>
 <li><a href='#' class="nav"><span  style="background:url(imgs/uae.png) no-repeat; padding:5px 20px;"></span><span>UAE</span></a>
 		<ul>
-		<li style=" font-size:20px;">All Cities</li>
+		<li style=" font-size:20px;">All</li>
 		<li style=" font-size:20px;">Dubai</li>
 	</ul>
 </li>
@@ -788,12 +814,15 @@ $('#z').click(function(){
 					</div>
 					
 				</div>
-
+	<div style=" position:absolute; bottom:0;">
+	
+	<img id="table" src="imgs/counter.jpg"  style=" width=140px; height=120px ">
+	</div>
 	</div>
 
 	<div style="float: right;  background:#404040;">
 <div class="menu_simple">
-<ul class="allmenue" style="width: 100%;    background-color: #8D8D8D;">
+<ul  style="width: 100%;    background-color: #8D8D8D;">
 <li><a id="u" class="nav"  href="#" class="current"><span style="font-size:25px" class="fa fa-usd"></span>Finance</a></li>
 <li><a id="x"  class="nav"  href="#" class="current"><span style="font-size:25px" class="fa fa-bars"></span>Home</a></li>
 <li><a id="y" class="nav" href="#"><span id="g5" style="font-size:25px"  class="fa fa-th-large"></span>Table</a></li>
@@ -806,14 +835,15 @@ $('#z').click(function(){
 </div>
 	</div>
 	
-	<div id="location1" style="width:244px; height:210px; position:absolute; display:none; right: 0px; top: 170px; padding:20px; float:right; background-color: #404040;>
-	<ul class=;>
-	<ul class="allLocation1">
+	
+<div id="location1" style="width:244px; height:210px; position:absolute; display:none; right: 0px; top: 170px; padding:20px; float:right; background-color: #404040;">
+<div id='cssmenu'>
+<ul class="allLocationleft">
 <li>
-	<a href='#' class="nav"><span  style="background:url(imgs/iraq.png) no-repeat; padding:5px 20px;"></span><span>Iraq<span></a>
+	<a href='#'   class="nav"><span  style="background:url(imgs/iraq.png) no-repeat;  padding:5px 20px;"></span><span>Iraq<span></a>
 	
 	<ul>
-		<li style="font-size:20px; ">All Cities</li>
+		<li style="font-size:20px; ">All</li>
 		<li style=" font-size:20px;">Najaf</li>
 		<li style=" font-size:20px;">Baghdad</li>
 		<li style=" font-size:20px;">Basra</li>
@@ -822,13 +852,13 @@ $('#z').click(function(){
 </li>
 <li><a href='#' class="nav"><span  style="background:url(imgs/uae.png) no-repeat; padding:5px 20px;"></span><span>UAE</span></a>
 		<ul>
-		<li style=" font-size:20px;">All Cities</li>
+		<li style=" font-size:20px;">All </li>
 		<li style=" font-size:20px;">Dubai</li>
 	</ul>
 </li>
 </ul>
 	</div>
-	
+	</div>	
 
 
 </body>
