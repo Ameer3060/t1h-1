@@ -1,0 +1,837 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gray Theme</title>
+<script src="jquery-1.11.3.min.js"></script>
+<script src="jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.min.css">
+<link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css">
+<script src="js/ion.sound.js"></script>
+<style>
+
+ /* Some stylesheet reset */
+#cssmenu  > ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	line-height: 1;
+}/* The container */
+#cssmenu  > ul {
+	display: block;
+	position: relative;
+	width: 246px;
+}
+
+	/* The list elements which contain the links */
+	#cssmenu  > ul li {
+		display: block;
+		position: relative;
+		margin: 0;
+		padding: 0;
+		width: 246px;	
+	}
+
+		/* General link styling */
+		#cssmenu  > ul li a {
+			/* Layout */
+			display: block;
+			position: relative;
+			margin: 0;
+			border-top: 1px dotted #3a3a3a;
+			border-bottom: 1px dotted #1b1b1b;
+			padding: 7px 10px;
+			width: 264px;
+
+			/* Typography */
+			font-family: Helvetica, Arial, sans-serif;
+			color: #d8d8d8;
+			text-decoration: none;
+			text-transform: uppercase;
+			text-shadow: 0 1px 1px #000;
+			font-size: 13px;
+			font-weight: 300;			
+
+			/* Background & effects */
+			background: #282828;
+		}
+
+		/* Rounded corners for the first link of the menu/submenus */
+		#cssmenu  > ul li:first-child>a {
+			border-top-left-radius: 4px;
+			border-top-right-radius: 4px;
+			border-top: 0;
+		}
+
+		/* Rounded corners for the last link of the menu/submenus */
+		#cssmenu  > ul li:last-child>a {
+			border-bottom-left-radius: 4px;
+			border-bottom-right-radius: 4px;
+			border-bottom: 0;
+		}
+
+
+		/* The hover state of the menu/submenu links */
+		#cssmenu  > ul li>a:hover, #cssmenu  > ul li:hover>a, #cssmenu  > ul li ul li:hover{
+			color: #fff;
+			text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
+			background: #54cdf1;
+			background: -webkit-linear-gradient(bottom, #54cdf1, #74d7f3);
+			background: -ms-linear-gradient(bottom, #54cdf1, #74d7f3); 
+			background: -moz-linear-gradient(bottom, #54cdf1, #74d7f3);
+			background: -o-linear-gradient(bottom, #54cdf1, #74d7f3);
+			border-color: transparent;
+		}
+
+		
+		/* The arrow indicating a submenu */
+		#cssmenu  > ul .has-sub>a::after {
+			content: '';
+			position: absolute;
+			top: 16px;
+			right: 10px;
+			width: 0px;
+			height: 0px;
+
+			/* Creating the arrow using borders */
+			border: 4px solid transparent;
+			border-left: 4px solid #d8d8d8; 
+		}
+
+		/* The same arrow, but with a darker color, to create the shadow effect */
+		#cssmenu  > ul .has-sub>a::before {
+			content: '';
+			position: absolute;
+			top: 17px;
+			right: 10px;
+			width: 0px;
+			height: 0px;
+
+			/* Creating the arrow using borders */
+			border: 4px solid transparent;
+			border-left: 4px solid #000;
+		}
+
+		/* Changing the color of the arrow on hover */
+		#cssmenu  > ul li>a:hover::after, #cssmenu  > ul li:hover>a::after {
+			border-left: 4px solid #fff;
+		}
+
+		#cssmenu  > ul li>a:hover::before, #cssmenu  > ul li:hover>a::before {
+			border-left: 4px solid rgba(0, 0, 0, .3);
+		}
+
+	
+		#cssmenu  > ul ul{    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 266px;
+    background-color: #282828;
+	display:none;
+	}
+	   #cssmenu  > ul ul li{ text-indent: 52px;
+    font-size: 12px;
+    color: #CBD8C5;
+	cursor:pointer;
+	
+	}
+		
+		
+
+
+
+.menu_simple {
+    width: 100%;
+    background-color: #8d8d8d;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:10px;
+	height: 65px;
+}
+
+.menu_simple ul {
+    margin: 0; padding: 0;
+    float: left;
+}
+
+.menu_simple ul li {
+    display: inline;
+}
+
+.menu_simple ul li a {
+    float: left; text-decoration: none;
+    color: white; 
+	font-size:9px !important;
+    padding: 10.5px 10.5px;
+    background-color:  #8d8d8d;
+	width:40px;
+    height: 35px;
+	text-align:center;
+}
+ 
+.menu_simple ul li a:visited {
+    color: white;
+}
+ 
+ div.absolute {
+    position: absolute;
+    top: 170px;
+    right: 0;
+	left: 300px;
+    height: 60%;
+}
+
+
+ div.absolute1 {
+ 
+    right: 0;
+	left: 300px;
+	top: 200px;
+	
+}
+
+.menu_simple ul li a:hover, .menu_simple ul li .current {
+    color: white;
+    background-color: #5FD367;
+}
+
+
+.menu_simple {
+    width: 100%;
+    background-color: #8d8d8d;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:10px;
+}
+
+.menu_simple ul {
+    margin: 0; padding: 0;
+    float: left;
+}
+
+.menu_simple ul li {
+    display: inline;
+}
+
+.menu_simple ul li a {
+    float: left; text-decoration: none;
+    color: white; 
+	font-size:9px !important;
+    padding: 10.5px 10.5px;
+    background-color:  #8d8d8d;
+	width:34.8px;
+    height: 44px;
+	text-align:center;
+}
+ 
+.menu_simple ul li a:visited {
+    color: white;
+}
+ 
+.menu_simple ul li a:hover, .menu_simple ul li .current {
+    color: white;
+    background-color: #5FD367;
+}
+
+
+
+
+
+
+.allmenue li a{
+    border-right: 1px solid #6B6A6A;
+	}
+	ul.vehicle-list{
+		margin:0; padding:0;list-style:none;    margin-left: 39px;margin-top:25px;
+		}
+		ul.vehicle-list li{margin:0; padding:0; width:27%; display:inline-block; text-align:center;    margin-bottom: 16px;}
+		
+		ul.wp{
+		margin:0; padding:0;list-style:none;    margin-left: 39px;margin-top:25px;
+		}
+		ul.wp li{margin:0; padding:0; width:35%; display:inline-block; text-align:center;}
+		
+</style>
+
+
+
+
+</head>
+
+
+<body  style="background:#000;">
+
+<div style="padding:0px; margin:0px; background:#000; color:white; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<script>
+$(document).ready(function(){
+	
+var first = 0;
+
+	ion.sound({
+            sounds: [
+                {name: "button_click_on"}
+            ],
+            path: "sounds/",
+            preload: true,
+			multiplay: true,
+            volume: 1.0
+        });
+
+
+		
+$('#g1').css('background-color', '#5FD367');
+
+$("#g2").click(function(){
+	$('.assetdetails').hide();	
+	$('.allmenue li a').css('background-color','#8D8D8D');
+	$(this).css('background-color','rgb(95, 211, 103)');
+    $("#home").css("display", "none");
+	
+	$("#companies").show("slide", { direction: "left" }, 500);
+	
+	
+	
+	$("#projects").css("display", "none");
+	$("#assets").css("display", "none");
+	$("#location").css("display", "none");
+	
+	    $("#g1").removeClass("current");
+		$("#g2").addClass("current");
+		$("#g3").removeClass("current");
+		$("#g4").removeClass("current");
+		$("#g5").removeClass("current");
+		
+				
+				$('#g3').css('background-color', '#8d8d8d');
+				$('#g4').css('background-color', '#8d8d8d');
+				$("#g3").css('background-image', 'none');
+				$("#g4").css('background-image', 'none');
+
+
+});
+
+$("#g3").click(function(){
+	$('.assetdetails').hide();	
+	$('.allmenue li a').css('background-color','#8D8D8D');
+	$(this).css('background-color','rgb(95, 211, 103)');
+    $("#home").css("display", "none");
+	$("#companies").css("display", "none");
+	$("#projects").show("slide", { direction: "left" }, 500);
+	$("#assets").css("display", "none");
+	$("#location").css("display", "none");
+	
+	    $("#g1").removeClass("current");
+		$("#g2").removeClass("current");
+		$("#g3").addClass("current");
+		$("#g4").removeClass("current");
+		$("#g5").removeClass("current");
+		
+		
+				$('#g4').css('background-color', '#8d8d8d');
+				$("#g4").css('background-image', 'none');
+
+});
+
+$("#g4").click(function(){
+	$('.assetdetails').hide();	
+	$('.allmenue li a').css('background-color','#8D8D8D');
+	$(this).css('background-color','rgb(95, 211, 103)');
+    $("#home").css("display", "none");
+	$("#companies").css("display", "none");
+	$("#projects").css("display", "none");
+		
+	$("#assets").show("slide", { direction: "left" }, 500);
+	$("#location").css("display", "none");
+	
+	    $("#g1").removeClass("current");
+		$("#g2").removeClass("current");
+		$("#g3").removeClass("current");
+		$("#g4").addClass("current");
+		$("#g5").removeClass("current");
+
+});
+
+$("#g51").click(function(){
+
+$("#location1").toggle("slide", { direction: "right" }, 500);
+});
+
+$("#g5").click(function(){
+	$('.assetdetails').hide();	
+	$('.allmenue li a').css('background-color','#8D8D8D');
+	$(this).css('background-color','rgb(95, 211, 103)');
+ $("#home").css("display", "none");
+	$("#companies").css("display", "none");
+	$("#projects").css("display", "none");
+	$("#assets").css("display", "none");
+	
+	$("#location").show("slide", { direction: "right" }, 500);
+
+	    $("#g1").removeClass("current");
+		$("#g2").removeClass("current");
+		$("#g3").removeClass("current");
+		$("#g4").removeClass("current");
+		$("#g5").addClass("current");
+
+		
+		
+				$('#g2').css('background-color', '#8d8d8d');
+				$('#g3').css('background-color', '#8d8d8d');
+				$('#g4').css('background-color', '#8d8d8d');
+				$("#g2").css('background-image', 'none');
+				$("#g3").css('background-image', 'none');
+				$("#g4").css('background-image', 'none');
+});
+
+function click_popup()
+{
+
+}
+/////////////////////
+var count = 0;
+
+$('.allmenue li .nav').click(function(){
+				count++;
+				
+				
+				var index=$(this).parents('li').index();
+				var id=$(this).attr("id");
+				
+				ion.sound.play("button_click_on");
+			/*	
+				$('.items a').on('click', function() {
+  var $this = $(this),
+      $bc = $('<div class="item"></div>');
+
+  $this.parents('li').each(function(n, li) {
+      var $a = $(li).children('a').clone();
+      $bc.prepend(' / ', $a);
+  });
+    $('.breadcrumb').html( $bc.prepend('<a href="#home">Home</a>') );
+    return false;
+}) 
+	*/			
+				
+				
+				 $bc = $('<div class="item"></div>');
+				var $this = $(this);
+				  $this.parents('li').each(function(n, li) {
+					  var $a = $(li).children('a').clone();
+					  
+					   $bc.prepend(' / ', $a);
+					   console.log($bc[0].innerHTML);
+				  });
+    return false;
+});
+
+$('.allLocation li .nav').click(function(){
+	$('.allLocation li ul').hide();
+	
+	$(this).next().show();
+})
+
+$('.allLocation li ul li').click(function(){
+				
+				//alert($(this).parent('ul').parent('li').index());
+				first = 1;
+				
+				$('.allmenue li a').empty();
+				$('#g1').html('<span style="font-size:25px" class="fa fa-home"></span>Home');
+				
+				ion.sound.play("button_click_on");
+				$("#g5 span").removeClass("fa fa-globe");
+				$("#g2 span").removeClass("fa fa-globe");
+				$("#g3 span").removeClass("fa fa-globe");
+				$("#g4 span").removeClass("fa fa-globe");
+				
+				var id=$(this).parent('ul').parent('li').index();
+				console.log(id);
+				$('#g5').css({'background-image':'url(imgs/c'+(id+1)+'.png)','background-color': '#5FD367','background-repeat':'no-repeat','background-position':'center','line-height':'70px'}).text($(this).text());
+				$("#g5 span").removeClass("fa fa-globe");
+				$('#g1').css('background-color', '#8d8d8d');
+							
+				$("#home").css("display", "none");
+				$("#companies").show("slide", { direction: "left" }, 500);
+				$("#projects").css("display", "none");
+				$("#assets").css("display", "none");
+				$("#location").css("display", "none");
+	
+				$("#g1").addClass("current");
+				$("#g2").removeClass("current");
+				$("#g3").removeClass("current");
+				$("#g4").removeClass("current");
+				$("#g5").removeClass("current");
+
+
+});
+$('.allcomapny li .nav').click(function(){
+				var text =$('#g5').text();
+				
+
+				$('.allmenue li a').empty();
+				$('#g1').html('<span style="font-size:25px" class="fa fa-home"></span>Home');
+				var id=$(this).parents('li').index();
+				ion.sound.play("button_click_on");
+				
+				
+				$("#home").css("display", "none");
+				$("#companies").css("display", "none");
+				$("#projects").show("slide", { direction: "left" }, 500);
+				$("#assets").css("display", "none");
+				$("#location").css("display", "none");
+				
+				if(first == 1)
+				{
+				$('#g2').css({'background-image':'url(imgs/menu'+(id+2)+'.png)','background-color': '#5FD367','id': 'g2'});
+				}
+				else
+				{
+				first = 2;
+				$(this).parents('li').prev().remove();
+				$('#g5').parent().hide();
+				$('#g2').css({'background-image':'url(imgs/menu'+(id+2)+'.png)','background-color': '#5FD367'});
+				$('#g3').css('background-color', '#8d8d8d');
+				
+				$("#g3 span").removeClass("fa fa-globe");
+				$("#g4 span").removeClass("fa fa-globe");
+				
+				}
+				$("#g2 span").removeClass("fa fa-globe");
+				
+				
+				
+				$("#g1").removeClass("current");
+				$("#g2").removeClass("current");
+				$("#g3").addClass("current");
+				$("#g4").removeClass("current");
+				$("#g5").removeClass("current");
+
+				
+				$("#g4 span").removeClass("fa fa-globe");
+				$("#g5 span").removeClass("fa fa-globe");
+				$("#g2 span").removeClass("fa fa-globe");
+				$("#g3 span").removeClass("fa fa-globe");
+				
+				$('#g5').text(text);
+			});
+			
+	
+$('.allprojects li .nav').click(function(){
+				var text =$('#g5').text();
+				$('.allmenue li a').empty();
+				$('#g1').html('<span style="font-size:25px" class="fa fa-home"></span>Home');
+				var id=$(this).parents('li').index();
+				console.log(id);
+				ion.sound.play("button_click_on");
+				if(first == 1)
+				{
+				$('#g3').css({'background-image':'url(imgs/menu2'+(id+2)+'.png)','background-color': '#5FD367'});
+				}
+				else if(first == 2)
+				{
+				$('#g3').css({'background-image':'url(imgs/menu2'+(id+2)+'.png)','background-color': '#5FD367'});
+				$('#g4').css('background-color', '#8d8d8d');
+				}
+				else
+				{
+				
+				first = 3;
+				$('#g5').parent().hide();
+				$('#g2').parent().hide();
+				$('#g3').css({'background-image':'url(imgs/menu2'+(id+2)+'.png)','background-color': '#5FD367'});
+				$('#g4').css('background-color', '#8d8d8d');
+				
+				}
+				
+				$("#g2 span").removeClass("fa fa-globe");
+				
+				
+				$("#g4 span").removeClass("fa fa-globe");
+				$("#g5 span").removeClass("fa fa-globe");
+				$("#g2 span").removeClass("fa fa-globe");
+				$("#g3 span").removeClass("fa fa-globe");
+				
+				$("#home").css("display", "none");
+				$("#companies").css("display", "none");
+				$("#projects").css("display", "none");
+				$("#assets").show("slide", { direction: "left" }, 500);
+				$("#location").css("display", "none");
+	
+				$("#g1").removeClass("current");
+				$("#g2").removeClass("current");
+				$("#g3").removeClass("current");
+				$("#g4").addClass("current");
+				$("#g5").removeClass("current");
+				$('#g5').text(text);
+
+});
+
+
+$('.allassets li .nav').click(function(){
+				var text =$('#g5').text();
+				$('.allmenue li a').empty();
+				$('#g1').html('<span style="font-size:25px" class="fa fa-home"></span>Home');
+				
+				ion.sound.play("button_click_on");
+				var id=$(this).parents('li').index();
+				console.log(id);
+				$('.asset-title').text($(this).find('span').eq(1).text());
+				if(first == 1)
+				{
+				$('#g4').css({'background-image':'url(imgs/'+(id+1)+'.png)','background-color': '#5FD367'});
+				}
+				else if(first == 2)
+				{
+				$('#g4').css({'background-image':'url(imgs/'+(id+1)+'.png)','background-color': '#5FD367'});
+				}
+				else if(first == 3)
+				{
+				$('#g4').css({'background-image':'url(imgs/'+(id+1)+'.png)','background-color': '#5FD367'});
+				}
+				else
+				{
+				$('#g5').parent().hide();
+				$('#g2').parent().hide();
+				$('#g3').parent().hide();
+				$('#g4').css({'background-image':'url(imgs/'+(id+1)+'.png)','background-color': '#5FD367'});
+				
+				}
+				
+				$("#g4 span").removeClass("fa fa-globe");
+				$("#g5 span").removeClass("fa fa-globe");
+				$("#g2 span").removeClass("fa fa-globe");
+				$("#g3 span").removeClass("fa fa-globe");
+				
+				
+				$("#g51 span").removeClass("fa fa-globe");
+				$("#g2 span").removeClass("fa fa-globe");
+				$("#g3 span").removeClass("fa fa-globe");
+				$("#g4 span").removeClass("fa fa-globe");
+				
+				
+				$('.assetdetails').show();
+			
+				$('.t-dt').hide();
+				$('.t-dt').eq(id).show();
+				$('#g5').text(text);
+				
+				
+});
+
+$('#g1').click(function(){
+  location.reload();
+});
+
+$('#x').click(function(){
+ $('#table').attr("src", "imgs/table.PNG");
+  
+})
+
+
+$('#y').click(function(){
+ $('#table').attr("src", "imgs/metro.PNG");
+  
+})
+
+$('#z').click(function(){
+ $('#table').attr("src", "imgs/map.png");
+  
+  
+})
+
+
+  $('#u').click(function(){
+ $('#table').attr("src", "imgs/fin.PNG");
+})
+
+});
+
+</script>
+
+
+
+<div style="background:#404040; width:100%;"><div style="padding:20px;"><img src="imgs/tier-one-management-system.png" width="200" height="49" alt=""/></div></div>
+
+<div class="absolute1" style="background:#404040;">
+
+
+<div class="absolute" >
+	
+<img id="table" src="imgs/table.PNG"  style="float: center" width="1000px" height="500px" alt=""/>
+</div>
+</div>
+<div style="width:284px; position: absolute; height:800px; background:#404040;">
+
+
+<div class="menu_simple">
+<ul class="allmenue" style="width: 100%;    background-color: #8D8D8D;">
+<li><a id="g1"  class="nav"  href="#" class="current"><span style="font-size:25px" class="fa fa-home"></span><span style="font-size:7px; line-height:3;">Home</span></a></li>
+<li><a id="g5" class="nav" href="#"><span id="g5" style="font-size:25px"  class="fa fa-globe"></span><span style="font-size:7px; line-height:3;">Locations</span></a></li>
+<li>
+	<a id="g2" class="nav" href="#"><span style="font-size:25px" class="fa fa-globe"></span><span style="font-size:7px; line-height:3;">Companies</span></a>
+	
+</li>
+<li><a id="g3" class="nav" href="#"><span style="font-size:25px" class="fa fa-globe"></span><span style="font-size:7px; line-height:3;">Contracts</span></a></li>
+<li><a id="g4" class="nav" href="#"><span style="font-size:25px" class="fa fa-globe"></span><span style="font-size:7px; line-height:3;">Material</span></a></li>
+</ul>
+</div>
+
+<div id="companies" style="display:none">
+<h3 style="text-align:center">COMPANIES</h3>
+<div id='cssmenu'>
+<ul class="allcomapny">
+<li><a href='#' class="nav" id="t1h"><span  href="javascript:void(0);" class="nav" style="background:url(imgs/t1h.png) no-repeat; padding:5px 20px;"></span><span >Tier One Holdings<span></a></li>
+<li><a href='#' class="nav"><span style="background:url(imgs/t1h.png) no-repeat; padding:5px 20px;"></span><span  > Tier One Maritime</span></a></li>
+<li><a href='#' class="nav"><span style="background:url(imgs/ness.png) no-repeat; padding:5px 20px;"></span><span  >Near East Security</span></a></li>
+<li><a href='#' class="nav"><span style="background:url(imgs/saa-all.png) no-repeat; padding:5px 20px;"></span><span >Sama Al Azdhar</span></a></li>
+<li><a href='#' class="nav"><span style="background:url(imgs/alnasak.png) no-repeat; padding:5px 20px;"></span><span >Alnasak</span></a></li>
+<li><a href='#' class="nav"><span  style="background:url(imgs/modcon.png) no-repeat; padding:5px 20px;"></span><span >Modular Construction</span></a></li>
+<li><a href='#' class="nav"><span  style="background:url(imgs/anticip.png) no-repeat; padding:5px 20px;"></span><span >Anticip</span></a></li>
+</ul>
+</div>
+</div>
+
+<div id="projects" style="display:none">
+<h3 style="text-align:center">Contracts</h3>
+<div id='cssmenu'>
+<ul class="allprojects">
+<li><a href='#' class="nav"><span  style="background:url(imgs/lukoil.png) no-repeat; padding:5px 20px;"></span><span>Lukoil<span></a></li>
+<li><a href='#' class="nav"><span  style="background:url(imgs/niap.png) no-repeat; padding:5px 20px;"></span><span>NIAP</span></a></li>
+<li><a href='#' class="nav"><span  style="background:url(imgs/ke.png) no-repeat; padding:5px 20px;"></span><span>Korean Embassy</span></a></li>
+<li><a href='#' class="nav"><span  style="background:url(imgs/total.png) no-repeat; padding:5px 20px;"></span><span>Total Villa</span></a></li>
+</ul>
+</div>
+</div>
+
+<div id="assets" style="display:none">
+<h3 style="text-align:center">MATERIALS</h3>
+<div id='cssmenu'>
+<ul class="allassets">
+<li><a href='#' class="nav"><span  style=" font-size:20px;  width:40px; text-align:center; padding-right:10px" class="fa fa-user"></span><span>Personnel<span></a></li>
+<li><a href='#'class="nav" ><span  style=" font-size:20px; width:40px; text-align:center; padding-right:10px" class="fa fa-car"></span><span>Vehicles</span></a></li>
+<li><a href='#' class="nav" ><span  style=" font-size:20px; width:40px; text-align:center; padding-right:10px" class="fa fa-bolt"></span><span>Radios</span></a></li>
+<li><a href='#' class="nav" ><span  style=" font-size:20px; width:40px; text-align:center; padding-right:10px" class="fa fa-fire"></span><span>Weapons</span></a></li>
+<li><a href='#' class="nav" ><span  style=" font-size:20px; width:40px; text-align:center; padding-right:10px" class="fa fa-bar-chart"></span><span>Up Keep</span></a></li>
+</ul>
+</div>
+</div>
+
+<div id="location" style="display:none" >
+<h3 style="text-align:center">LOCATION</h3>
+<div id='cssmenu'>
+<ul class="allLocation">
+<li>
+	<a href='#' class="nav"><span  style="background:url(imgs/iraq.png) no-repeat; padding:5px 20px;"></span><span>Iraq<span></a>
+	
+	<ul>
+		<li style="font-size:20px; ">All Cities</li>
+		<li style=" font-size:20px;">Najaf</li>
+		<li style=" font-size:20px;">Baghdad</li>
+		<li style=" font-size:20px;">Basra</li>
+	</ul>
+
+</li>
+<li><a href='#' class="nav"><span  style="background:url(imgs/uae.png) no-repeat; padding:5px 20px;"></span><span>UAE</span></a>
+		<ul>
+		<li style=" font-size:20px;">All Cities</li>
+		<li style=" font-size:20px;">Dubai</li>
+	</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+
+
+<div style="color:#FFF; display:none" class="assetdetails">
+					<div class="asset-title" style="text-align:center;padding-top:15px;background:url(imgs/dt-bg.png);padding-bottom:15px;">
+						Personal
+					</div>
+					
+					<div class="asset-area" >
+						
+							<div class="t-dt">
+								<ul class="vehicle-list">
+									<li><img src="imgs/personelsmall.png" /><br/><span class="count">50</span></li>
+									<li><img src="imgs/personelsmall2.png" /><br/><span class="count">75</span></li>
+									<li><img src="imgs/personelsmall3.png" /><br/><span class="count">99</span></li>
+									<li><img src="imgs/personelsmall4.png" /></li>
+									<li><img src="imgs/personelsmall5.png" /></li>
+								</ul>
+							</div>
+							<div class="t-dt">
+								<ul class="vehicle-list">
+									<li><img src="imgs/vehiclesmall1.png" /><br/><span class="count">50</span></li>
+									<li><img src="imgs/vehiclesmall2.png" /><br/><span class="count">75</span></li>
+									<li><img src="imgs/vehiclesmall3.png" /><br/><span class="count">99</span></li>
+									<li><img src="imgs/vehiclesmall4.png" /><br/><span class="count">50</span></li>
+									<li><img src="imgs/vehiclesmall5.png" /><br/><span class="count">75</span></li>
+									<li><img src="imgs/vehiclesmall6.png" /><br/><span class="count">99</span></li>
+								</ul>
+							</div>
+							
+							<div class="t-dt">
+								radios
+							</div>
+							<div class="t-dt">
+								<ul class="wp">
+									<li><img src="imgs/wp1.png" /><br/><span class="count">50</span></li>
+									<li><img src="imgs/wp2.png" /><br/><span class="count">75</span></li>
+								</ul>
+							</div>
+							<div class="t-dt">
+								Up Keep
+
+							</div>
+						
+					</div>
+					
+				</div>
+
+	</div>
+
+	<div style="float: right;  background:#404040;">
+<div class="menu_simple">
+<ul class="allmenue" style="width: 100%;    background-color: #8D8D8D;">
+<li><a id="u" class="nav"  href="#" class="current"><span style="font-size:25px" class="fa fa-usd"></span>Finance</a></li>
+<li><a id="x"  class="nav"  href="#" class="current"><span style="font-size:25px" class="fa fa-bars"></span>Home</a></li>
+<li><a id="y" class="nav" href="#"><span id="g5" style="font-size:25px"  class="fa fa-th-large"></span>Table</a></li>
+<li>
+	<a id="z" class="nav" href="#"><span style="font-size:25px" class="fa fa-map"></span>Map</a>
+	
+</li>
+<li><a id="g51" class="nav" href="#"><span id="g5" style="font-size:25px"  class="fa fa-globe"></span>Location</a></li>
+</ul>
+</div>
+	</div>
+	
+	<div id="location1" style="width:244px; height:210px; position:absolute; display:none; right: 0px; top: 170px; padding:20px; float:right; background-color: #404040;>
+	<ul class=;>
+	<ul class="allLocation1">
+<li>
+	<a href='#' class="nav"><span  style="background:url(imgs/iraq.png) no-repeat; padding:5px 20px;"></span><span>Iraq<span></a>
+	
+	<ul>
+		<li style="font-size:20px; ">All Cities</li>
+		<li style=" font-size:20px;">Najaf</li>
+		<li style=" font-size:20px;">Baghdad</li>
+		<li style=" font-size:20px;">Basra</li>
+	</ul>
+
+</li>
+<li><a href='#' class="nav"><span  style="background:url(imgs/uae.png) no-repeat; padding:5px 20px;"></span><span>UAE</span></a>
+		<ul>
+		<li style=" font-size:20px;">All Cities</li>
+		<li style=" font-size:20px;">Dubai</li>
+	</ul>
+</li>
+</ul>
+	</div>
+	
+
+
+</body>
+</html>
+
+
